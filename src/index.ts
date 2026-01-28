@@ -14,7 +14,7 @@ import analyticsRoutes from './routes/analytics.js';
 import reviewRoutes from './routes/reviews.js';
 import adminRoutes from './routes/admin.js';
 import categoriesRoutes from './routes/categories.js';
-import brandsRoutes from './routes/brands';
+import brandsRoutes from './routes/brands.js';
 import inventoryRoutes from './routes/inventory.js';
 import chatRoutes from './routes/chat.js';
 import { analyticsMiddleware } from './middleware/analytics.js';
