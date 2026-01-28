@@ -1,0 +1,249 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  name         String
+  email        String        @unique
+  password     String
+  phone        String?
+  balance      Float         @default(0)
+  role         String        @default("user") // "user", "admin", "reseller"
+  isActive     Boolean       @default(true)
+  address      String?
+  city         String?
+  country      String?
+  zipCode      String?
+  latitude     Float?
+  longitude    Float?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  orders       Order[]
+  transactions Transaction[]
+  vouchersUsed Voucher[]     @relation("VoucherUser")
+  userCoupons  UserCoupon[]
+  analyticsLogs AnalyticsLog[]
+  activityLogs  ActivityLog[]
+  notifications Notification[]
+  chatParticipants ChatParticipant[]
+  messagesSent     ChatMessage[]
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  brand       String
+  price       Float
+  category    String
+  subcategory String?
+  description String
+  image       String
+  images      String?  // JSON string of image URLs/base64
+  bgColor     String
+  colors      String?  // JSON string of available colors
+  sizes       String?  // JSON string of available sizes
+  stock       Int      @default(0)
+  lowStockThreshold Int @default(5)
+  inStock     Boolean  @default(true)
+  isOnSale    Boolean  @default(false)
+  salePrice   Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Category {
+  id            String   @id @default(uuid())
+  name          String   @unique
+  subcategories Json     // Array of subcategory strings
+  order         Int      @default(0)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([order])
+  @@index([isActive])
+}
+
+model Brand {
+  id        String   @id @default(uuid())
+  name      String
+  logo      String   // SVG content or URL
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  items          String   // JSON string of cart items
+  total          Float
+  status         String   @default("pending") // pending, processing, completed, cancelled
+  shippingInfo   String?  // JSON string of address and GPS
+  couponCode     String?
+  discountAmount Float    @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Voucher {
+  id        String    @id @default(uuid())
+  code      String    @unique
+  amount    Float
+  isUsed    Boolean   @default(false)
+  usedBy    String?
+  user      User?     @relation("VoucherUser", fields: [usedBy], references: [id])
+  expiresAt DateTime
+  createdAt DateTime  @default(now())
+}
+
+model Transaction {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  type         String   // voucher_redeem, voucher_sent, voucher_received, purchase, add_funds
+  amount       Float
+  description  String
+  relatedEmail String?
+  createdAt    DateTime @default(now())
+}
+
+model Coupon {
+  id              String       @id @default(uuid())
+  code            String       @unique
+  discountType    String       // "percentage" or "fixed"
+  discountValue   Float        // percentage (0-100) or fixed amount
+  minPurchase     Float        @default(0)
+  maxDiscount     Float?       // max discount for percentage coupons
+  usageLimit      Int          @default(1) // how many times total can be used
+  usedCount       Int          @default(0)
+  isActive        Boolean      @default(true)
+  validFrom       DateTime     @default(now())
+  validUntil      DateTime
+  assignedToUserId String?     // if null, available to all
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  userCoupons     UserCoupon[]
+}
+
+model UserCoupon {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  couponId  String
+  coupon    Coupon    @relation(fields: [couponId], references: [id])
+  isUsed    Boolean   @default(false)
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@unique([userId, couponId])
+}
+
+model AnalyticsLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  ipAddress String
+  userAgent String?
+  path      String
+  method    String
+  event     String   @default("api_request")
+  metadata  String?  // JSON string
+  
+  // Enhanced Tracking
+  deviceType       String?
+  browser          String?
+  os               String?
+  screenResolution String?
+  language         String?
+  referrer         String?
+  location         Json?    // { lat, lng, accuracy, permissionStatus }
+  
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([ipAddress])
+}
+
+model ActivityLog {
+  id          String   @id @default(cuid())
+  type        String   // 'order', 'product', 'user', 'payment', 'system'
+  action      String   // 'created', 'updated', 'deleted', etc.
+  description String
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  metadata    Json?    // Additional data about the action
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([type])
+  @@index([userId])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // 'info', 'success', 'warning', 'error'
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  actionUrl String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([userId, read])
+  @@index([createdAt])
+}
+
+model Settings {
+  id    String @id @default(cuid())
+  key   String @unique
+  value Json
+
+  @@index([key])
+}
+
+model ChatChannel {
+  id        String    @id @default(cuid())
+  name      String?   // Optional for direct messages
+  type      String    // 'direct', 'group'
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  messages  ChatMessage[]
+  participants ChatParticipant[]
+}
+
+model ChatParticipant {
+  id        String      @id @default(cuid())
+  userId    String
+  user      User        @relation(fields: [userId], references: [id])
+  channelId String
+  channel   ChatChannel @relation(fields: [channelId], references: [id])
+  joinedAt  DateTime    @default(now())
+  lastRead  DateTime    @default(now())
+
+  @@unique([userId, channelId])
+}
+
+model ChatMessage {
+  id        String      @id @default(cuid())
+  content   String
+  senderId  String
+  sender    User        @relation(fields: [senderId], references: [id])
+  channelId String
+  channel   ChatChannel @relation(fields: [channelId], references: [id])
+  readBy    Json?       // Array of user IDs who read it
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}

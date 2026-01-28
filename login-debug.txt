@@ -1,0 +1,288 @@
+
+=== Login Attempt ===
+Time: 2025-12-03T14:45:33.011Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$JWCwtVHnbbn72/VvIqOehONqdiqgRbO3ahL1702USYnXHxbFRk3ve
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T14:49:13.417Z
+Email: vfd33sv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$bXgrJFUonYtjebZbM//AlugqEKMuJqPIIbKkWoxmRV4sj2n0XTToq
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T14:51:11.655Z
+Email: vfd33sv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$bXgrJFUonYtjebZbM//AlugqEKMuJqPIIbKkWoxmRV4sj2n0XTToq
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T14:59:28.880Z
+Email: vfd33sv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$bXgrJFUonYtjebZbM//AlugqEKMuJqPIIbKkWoxmRV4sj2n0XTToq
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T15:01:03.933Z
+Email: vfd33sv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$bXgrJFUonYtjebZbM//AlugqEKMuJqPIIbKkWoxmRV4sj2n0XTToq
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T15:06:52.705Z
+Email: vfds3v@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$pZ0LnY4QEQ/Emt/5KndDbuXeXjZkZ0AP.YcnJyZ.EmbFaFotWuKUu
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T15:21:56.219Z
+Email: vfd33sv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$bXgrJFUonYtjebZbM//AlugqEKMuJqPIIbKkWoxmRV4sj2n0XTToq
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T15:55:35.109Z
+Email: vfds3v@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$pZ0LnY4QEQ/Emt/5KndDbuXeXjZkZ0AP.YcnJyZ.EmbFaFotWuKUu
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T18:28:36.670Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T18:38:04.382Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T18:48:54.219Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-03T23:53:49.528Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-04T00:04:23.632Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-04T13:15:02.157Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-04T13:15:49.289Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-04T19:36:51.145Z
+Email: hatemidriheeb@gmail.com
+Password Entered: Killswitch22#
+Stored Hash: $2b$10$OoOvRpyYXbhHw3tcjtirReFuo.5BnVFGAtHF/AKySjFr.gJ3f1Tf.
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-04T19:37:55.939Z
+Email: hatemidriheeb@gmail.com
+Password Entered: Killswitch22#
+Stored Hash: $2b$10$OoOvRpyYXbhHw3tcjtirReFuo.5BnVFGAtHF/AKySjFr.gJ3f1Tf.
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T13:51:46.311Z
+Email: vfdsv@fdsf.vvvv
+Password Entered: 123123
+Stored Hash: $2b$10$p5nfyn6yWLAgSliB1mtww.VJChDrZ8FbV5UoShRrYrDegWDVWt64K
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T18:50:18.758Z
+Email: admin@glamourglow.com
+Password Entered: 123123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T19:07:07.419Z
+Email: hatemidriheeb@gmail.com
+Password Entered: Killswitch22#
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T19:46:31.324Z
+Email: hatemidriheeb@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T19:46:37.632Z
+Email: hatemidriheeb@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T19:47:18.021Z
+Email: hatemidrihee1b@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$HgmUwOsLnRqCLs6rIUYrgenIe2LDM219r.LQUufzbPsd8AWpNzpQG
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T20:21:41.867Z
+Email: admin@glamourglow.com
+Password Entered: 123123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T20:21:44.538Z
+Email: admin@glamourglow.com
+Password Entered: 123123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T20:21:46.432Z
+Email: admin@glamourglow.com
+Password Entered: 123123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T20:22:06.608Z
+Email: hatemidrihee1b@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$HgmUwOsLnRqCLs6rIUYrgenIe2LDM219r.LQUufzbPsd8AWpNzpQG
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T21:12:08.769Z
+Email: hatemidrihee1b@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$HgmUwOsLnRqCLs6rIUYrgenIe2LDM219r.LQUufzbPsd8AWpNzpQG
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T21:12:31.069Z
+Email: hatemidrihee1b@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$HgmUwOsLnRqCLs6rIUYrgenIe2LDM219r.LQUufzbPsd8AWpNzpQG
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T21:14:20.796Z
+Email: hatemidriheeb@gmail.com
+Password Entered: Killswitch22#
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T21:15:53.225Z
+Email: hatemidriheeb@gmail.com
+Password Entered: Killswitch22#
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T23:12:42.555Z
+Email: hatemidriheeb@gmail.com
+Password Entered: 1236123
+Stored Hash: $2b$10$UhAJSYzG3gJcItGj80pcx.Y6b83Q1BVhL5BXNP8CKfPbiicSWKZ0W
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T23:13:15.756Z
+Email: admin@glamourglow.com
+Password Entered: 123123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: false
+==================
+
+=== Login Attempt ===
+Time: 2025-12-05T23:13:43.225Z
+Email: hatemidrihee1b@gmail.com
+Password Entered: 123123
+Stored Hash: $2b$10$HgmUwOsLnRqCLs6rIUYrgenIe2LDM219r.LQUufzbPsd8AWpNzpQG
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2025-12-07T11:19:11.902Z
+Email: admin@glamourglow.com
+Password Entered: admin123
+Stored Hash: $2b$10$ZdZd6ISiYIj5LF6Crnb2/e7Cu55Xr6YRsUuYDh4PhglRyhUXi2m3G
+Password Valid: true
+==================
+
+=== Login Attempt ===
+Time: 2026-01-28T09:06:10.857Z
+Email: admin@glamourglow.com
+Password Entered: admin123
+Stored Hash: $2b$10$Ekg57efZ7entQU7cXeEb/esCaMBlg7J0Vmgh2boJrCBaQFBqG2jrO
+Password Valid: true
+==================
