@@ -33,15 +33,29 @@ initSocket(httpServer);
 
 // Middleware
 app.use(cors({
-    origin: [
-        'http://localhost:8081',
-        'http://localhost:8080',
-        'http://localhost:5173',
-        'http://localhost:3000',
-        'https://aldarb.ly',
-        'https://last-production-ed64.up.railway.app',
-        'https://glamour-glow-website-main-production.up.railway.app'
-    ],
+    origin: (origin, callback) => {
+        const allowedOrigins = [
+            'http://localhost:8081',
+            'http://localhost:8080',
+            'http://localhost:5173',
+            'http://localhost:3000',
+            'https://aldarb.ly'
+        ];
+
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
+
+        // Allow any Railway deployment
+        if (origin.endsWith('.up.railway.app')) {
+            return callback(null, true);
+        }
+
+        callback(null, false);
+    },
     credentials: true
 }));
 app.use(express.json());
