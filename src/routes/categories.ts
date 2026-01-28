@@ -67,12 +67,12 @@ router.post(
             });
 
             // Log activity
-            if (req.user) {
+            if (req.userId) {
                 await createActivityLog({
                     type: 'product',
                     action: 'created',
                     description: `Created category: ${name}`,
-                    userId: req.user.id,
+                    userId: req.userId,
                     metadata: { categoryId: category.id, name }
                 });
             }
@@ -107,12 +107,12 @@ router.put(
             });
 
             // Log activity
-            if (req.user) {
+            if (req.userId) {
                 await createActivityLog({
                     type: 'product',
                     action: 'updated',
                     description: `Updated category: ${category.name}`,
-                    userId: req.user.id,
+                    userId: req.userId,
                     metadata: { categoryId: id, changes: updateData }
                 });
             }
@@ -160,12 +160,12 @@ router.delete(
             });
 
             // Log activity
-            if (req.user) {
+            if (req.userId) {
                 await createActivityLog({
                     type: 'product',
                     action: 'deleted',
                     description: `Deleted category: ${category.name}`,
-                    userId: req.user.id,
+                    userId: req.userId,
                     metadata: { categoryId: id, name: category.name }
                 });
             }

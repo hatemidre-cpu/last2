@@ -22,7 +22,7 @@ async function main() {
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - 60);
 
-    const orders = [];
+    const orders: any[] = [];
 
     for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
         // Generate 1-5 orders per day

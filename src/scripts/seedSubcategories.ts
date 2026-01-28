@@ -31,7 +31,7 @@ async function main() {
     const products = await prisma.product.findMany();
 
     for (const product of products) {
-        let subcategory = null;
+        let subcategory: string | null = null;
         const name = product.name.toLowerCase();
         const desc = product.description.toLowerCase();
         const category = product.category;

@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 // Get all channels for the current user
 router.get('/channels', adminMiddleware, async (req: AuthRequest, res: Response): Promise<void> => {
     try {
-        const userId = req.user?.userId;
+        const userId = req.userId;
 
         const channels = await prisma.chatChannel.findMany({
             where: {
@@ -54,7 +54,7 @@ router.get('/channels', adminMiddleware, async (req: AuthRequest, res: Response)
 router.post('/channels', adminMiddleware, async (req: AuthRequest, res: Response): Promise<void> => {
     try {
         const { type, participantIds, name } = req.body; // participantIds should NOT include current user
-        const currentUserId = req.user?.userId;
+        const currentUserId = req.userId;
 
         if (!currentUserId) {
             res.status(401).json({ error: 'Unauthorized' });
@@ -161,7 +161,7 @@ router.post('/channels/:channelId/messages', adminMiddleware, async (req: AuthRe
     try {
         const { channelId } = req.params;
         const { content } = req.body;
-        const senderId = req.user?.userId;
+        const senderId = req.userId;
 
         if (!senderId) {
             res.status(401).json({ error: 'Unauthorized' });
